@@ -7,27 +7,28 @@
     <title>ARNA TRAVEL // HTML Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    
+
 
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
     <!-- This core.css file contents all plugings css file. -->
-    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="{{asset("css/core.css")}}">
     <!-- Template shortcodes/elements style -->
-    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="{{asset("css/shortcode/shortcodes.css")}}">
     <!-- Template main style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset("style.css")}}">
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{asset("css/responsive.css")}}">
     <!-- User style -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{asset("css/custom.css")}}">
 
-
+    @yield('css')
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -35,7 +36,7 @@
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->  
+    <![endif]-->
 
     <!-- Body main wrapper start -->
     <div class="wrapper fixed-newslatter">
@@ -45,7 +46,7 @@
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-12">
                         <div class="logo">
-                            <a href="/"><img src="logo.jpg" height="60" alt="logo"></a>
+                            <a href="/"><img src="logo1.png" height="60" alt="logo"></a>
                             <!-- <a href="/">ARNA Travel</a> -->
                         </div>
                     </div>
@@ -53,7 +54,8 @@
                         <div class="header__top">
                             <div class="header__top__left">
                                 <p><span class="text-theme">Contact:</span><a href="#">0088-234-675-827</a></p>
-                                <p class="hidden-sm"><span class="text-theme">Opening Hours:</span> Mon - Sat 8.00 - 18.00. Sunday CLOSED</p>
+                                <p class="hidden-sm"><span class="text-theme">Opening Hours:</span> Mon - Sat 8.00 -
+                                    18.00. Sunday CLOSED</p>
                             </div>
                             <div class="header__top__right">
                                 <ul class="login__regester">
@@ -69,9 +71,9 @@
                                         <li><a href="/">home</a>
                                         </li>
                                         <li><a href="/about">about</a></li>
-										<li><a href="/packages">Packages</a></li>
+                                        <li><a href="/packages">Packages</a></li>
                                         <li><a href="/gallery">gallery</a></li>
-                                     
+
                                         <li><a href="/contact">contact</a></li>
                                     </ul>
                                 </nav>
@@ -92,7 +94,7 @@
             <!-- Mobile-menu-area start -->
             <div class="mobile-menu-area hidden-md hidden-lg hidden-sm">
                 <div class="fluid-container mobile-menu-container">
-                    <div class="mobile-logo"><a href="/"><img src="logo.jpg" height="60" alt="Mobile logo"></a></div>
+                    <div class="mobile-logo"><a href="/"><img src="logo1.png" height="60" alt="Mobile logo"></a></div>
                     <div class="mobile-menu clearfix">
                         <nav id="mobile_dropdown">
                             <ul>
@@ -103,7 +105,7 @@
                                 <li><a href="/contact">contact</a></li>
                             </ul>
                         </nav>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <!-- Mobile-menu-area End -->
@@ -111,9 +113,9 @@
         <!-- End Header Style -->
 
 
-		@yield('content')
+        @yield('content')
 
-		<footer class="footer__area bg-4">
+        <footer class="footer__area bg-4">
             <div class="footer__top ptb-70" data-black-overlay="8">
                 <div class="container">
                     <div class="row">
@@ -123,25 +125,30 @@
                                 <div class="footer__wedget">
                                     <div class="footer__logo">
                                         <a href="#">
-                                            <img src="logo.jpg" height="60" alt="logo">
+                                            <img src="logo1.png" height="60" alt="logo">
                                         </a>
                                     </div>
-                                    <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit, sed do eiusmod tempor incididunt ut labore egtt dolore magna aliqua. Ut enim ad minim veniam, quisgt nostrud exercitation ullamco laboris.</p>
+                                    <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit,
+                                        sed do eiusmod tempor incididunt ut labore egtt dolore magna aliqua. Ut enim ad
+                                        minim veniam, quisgt nostrud exercitation ullamco laboris.</p>
                                     <ul class="footer__social__icon">
-                                        <li><a href="https://www.linkedin.com/"><i class="zmdi zmdi-linkedin"></i></a></li>
-                                        <li><a href="https://www.pinterest.com/"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/"><i class="zmdi zmdi-linkedin"></i></a>
+                                        </li>
+                                        <li><a href="https://www.pinterest.com/"><i class="zmdi zmdi-pinterest"></i></a>
+                                        </li>
                                         <li><a href="https://www.tumblr.com/"><i class="zmdi zmdi-tumblr"></i></a></li>
                                         <li><a href="https://plus.google.com/"><i class="zmdi zmdi-google"></i></a></li>
-                                        <li><a href="https://www.facebook.com/"><i class="zmdi zmdi-facebook"></i></a></li>
+                                        <li><a href="https://www.facebook.com/"><i class="zmdi zmdi-facebook"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
-                     
+
                             <!-- End Single Footer -->
                             <!-- Start Single Footer -->
-                          
+
                             <!-- End Single Footer -->
                         </div>
                     </div>
@@ -172,7 +179,8 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
                     </div>
                     <div class="modal-body">
                         <div class="form-pop-up-content">
@@ -186,8 +194,8 @@
                                 </div>
                                 <div class="clearfix">
                                     <span class="remember pull-left">
-                                      <input type="checkbox" id="pass_chack" value="pass_remb">
-                                      <label for="pass_chack">Remember Me</label>
+                                        <input type="checkbox" id="pass_chack" value="pass_remb">
+                                        <label for="pass_chack">Remember Me</label>
                                     </span>
                                     <span class="pull-right"><a href="#">Forget Password?</a></span>
                                 </div>
@@ -196,8 +204,8 @@
                                 </div>
                             </form>
                         </div>
-                    </div>  
-                </div>  
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -210,7 +218,8 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
                     </div>
                     <div class="modal-body">
                         <div class="form-pop-up-content">
@@ -229,8 +238,8 @@
                                 </div>
                             </form>
                         </div>
-                    </div>  
-                </div>  
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -239,9 +248,9 @@
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="{{asset("js/vendor/jquery-1.12.0.min.js")}}"></script>
     <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{asset("js/bootstrap.min.js")}}"></script>
     <!-- All js plugins included in this file. -->
     <script src="js/plugins.js"></script>
     <script src="js/slick.min.js"></script>

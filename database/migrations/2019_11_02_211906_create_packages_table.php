@@ -15,12 +15,18 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('banner');
-            $table->string('desc');
-            $table->string('title');
-            $table->string('duration')->nullable();
-            $table->string('slug');
             $table->uuid('uuid');
+            $table->string('banner')->nullable();
+            $table->text('desc')->nullable();
+            $table->text('overview')->nullable();
+            $table->string('title')->nullable();
+            $table->string('duration')->nullable();
+            $table->string('slug')->nullable();
+            $table->integer('display_order')->nullable();
+            $table->json('included')->nullable();
+            $table->json('excluded')->nullable();
+            $table->json('ammenities')->nullable();
+            $table->enum('status', ['active', 'inactive', 'requested', 'rejected'])->default('inactive');
             $table->timestamps();
         });
     }

@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-12">
                         <div class="logo">
-                            <a href="/"><img src="logo.jpg" height="80" alt="logo"></a>
+                            <a href="/"><img src="logo1.png" height="80" alt="logo"></a>
                             <!-- <a href="/">ARNA Travel</a> -->
                         </div>
                     </div>
@@ -95,7 +95,7 @@
             <!-- Mobile-menu-area start -->
             <div class="mobile-menu-area hidden-md hidden-lg hidden-sm">
                 <div class="fluid-container mobile-menu-container">
-                    <div class="mobile-logo"><a href="/"><img src="logo.jpg" height="60" alt="Mobile logo"></a></div>
+                    <div class="mobile-logo"><a href="/"><img src="logo1.png" height="60" alt="Mobile logo"></a></div>
                     <div class="mobile-menu clearfix">
                         <nav id="mobile_dropdown">
                             <ul>
@@ -382,91 +382,8 @@
             </div>
         </section>
         <!-- End Funfact Area -->
-        <!-- Start Blog Area -->
-        <section class="blog__area ptb-100 bg-white">
-            <div class="container">
-                <!-- Start Our Section Title area -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="section__title text-center">
-                            <h2 class="title__line">Special <span class="text-theme">Packages</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt utllaf </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Our Section Title area -->
-                <div class="row">
-                    <div class="bolg__wrap clearfix mt-50">
-                        <!-- Start Single Blog -->
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-                            <div class="blog">
-                                <div class="blog__thumb">
-                                    <img src="img/3.jpg" alt="blog images">
-                                </div>
-                                <div class="blog__hover__information">
-                                    <div class="blog__hover__inner">
-                                        <p class="time"><i class="zmdi zmdi-time"></i>Duration : 5 Days </p>
-                                        <h2><a href="#">Starter Package</a></h2>
-                                        <p>Lorem ipsum dolor silt ameconsecur adipisicing elit, sehgbd djlo eiusmod
-                                            temporconsequat.</p>
-                                        <ul class="blog__like__comment">
-                                            {{-- <li><i class="zmdi zmdi-favorite"></i>20 </li>
-                                            <li><i class="zmdi zmdi-comments"></i>02 </li> --}}
-                                        </ul>
-                                        <div class="distanation__btn">
-                                            <a class="rm__btn btn--transparent" href="/packages">book now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                        <!-- Start Single Blog -->
-                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 xs--mt--30">
-                            <div class="blog">
-                                <div class="blog__thumb">
-                                    <img src="img/4.jpg" alt="blog images">
-                                </div>
-                                <div class="blog__hover__information">
-                                    <div class="blog__hover__inner">
-                                        <p class="time"><i class="zmdi zmdi-time"></i>Duration : 15 Days </p>
-                                        <h2><a href="#">Premium Package</a></h2>
-                                        <p>Lorem ipsum dolor silt ameconsecur adipisicing elit, sehgbd djlo eiusmod
-                                            temporconsequat.</p>
-                                        <ul class="blog__like__comment">
-                                            {{-- <li><i class="zmdi zmdi-favorite"></i>20 </li>
-                                            <li><i class="zmdi zmdi-comments"></i>02 </li> --}}
-                                        </ul>
-                                        <div class="distanation__btn">
-                                            <a class="rm__btn btn--transparent" href="/packages">book now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Blog Area -->
-        <!-- Start Countdown Area -->
-        <section class="countdown__area ptb-100 bg-2" data-black-overlay="7">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="count__down__inner text-center">
-                            <h2 style="margin-bottom: 30px;">IF YOU THINK <span class="text-theme">ADVENTURE</span> IS
-                                DANGEROUS, </h2>
-                            <h4>TRY ROUTINE, IT'S LETHAL</h4>
+        {{-- eyate spacial pkg --}}
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Countdown Area -->
 
         <!-- Start Top Destination Area -->
         <section class="top__distination__area bg-white  pt-100 pb-100">
@@ -603,7 +520,7 @@
                                 <div class="footer__wedget">
                                     <div class="footer__logo">
                                         <a href="#">
-                                            <img src="logo.jpg" height="60" alt="logo">
+                                            <img src="logo1.jpg" height="60" alt="logo">
                                         </a>
                                     </div>
                                     <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit,

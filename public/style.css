@@ -1326,7 +1326,7 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    height: 500px;
+    height: 350px;
     justify-content: center;
 }
 .bradcaump__inner {
@@ -1530,12 +1530,12 @@
     padding: 65px;
 }
 .contact-box input {
-  background: transparent none repeat scroll 0 0;
+  background: white none repeat scroll 0 0;
   border: 1px solid #e7e7e7;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
-  width: 46.5%;
+  width: 100%;
 }
 .contact-box {
     display: flex;
@@ -1557,7 +1557,7 @@
     margin-left: 30px;
 }
 .contact-box.message textarea {
-    background: transparent none repeat scroll 0 0;
+    background: white none repeat scroll 0 0;
     border: 1px solid #e7e7e7;
     min-height: 140px;
     padding: 20px;

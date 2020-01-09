@@ -4,57 +4,47 @@ namespace App\Http\Controllers;
 
 use App\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PackageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        return view('admin.package.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('admin.package.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'banner' => ['file'],
+            'desc' => ['string'],
+            'overview' => ['string'],
+            'title' => ['string', 'required'],
+            'duration' => ['string', 'required'],
+            'slug' => ['string', 'nullable'],
+            'included' => ['string', 'nullable'],
+            'ammenities' => ['string', 'nullable'],
+            'status' => ['nullable']
+        ]);
+
+        Package::create($request->all() + ['uuid' => Str::uuid()]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Package  $package
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Package $package)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Package  $package
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Package $package)
     {
         //
