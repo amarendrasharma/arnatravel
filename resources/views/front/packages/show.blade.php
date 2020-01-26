@@ -1,10 +1,9 @@
 @extends('layouts.otherfront')
+
 @section('css')
 <style>
 	/* Variables */
 	/* Base */
-
-
 	.timeline {
 		background: #252827;
 		font-size: 16px;
@@ -147,6 +146,10 @@
 	}
 
 	@media only screen and (max-width: 320px) {
+		.mt-20-included-excluded {
+			margin-top: 20px;
+		}
+
 		.timeline {
 			padding-right: 0px;
 		}
@@ -175,6 +178,10 @@
 	}
 
 	@media only screen and (min-width:321px) and (max-width: 360px) {
+		.mt-20-included-excluded {
+			margin-top: 20px;
+		}
+
 		.timeline {
 			padding-right: 0px;
 		}
@@ -185,7 +192,6 @@
 
 		.custom-padding-me {
 			padding: 10px;
-
 		}
 
 		#timeline-content {
@@ -197,13 +203,15 @@
 		.data-date {
 			position: unset;
 			text-align: left;
-
-
 		}
+
 
 	}
 
 	@media only screen and (min-width:361px) and (max-width: 480px) {
+		.mt-20-included-excluded {
+			margin-top: 20px;
+		}
 
 		.timeline {
 			padding-right: 0px;
@@ -220,22 +228,20 @@
 		#timeline-content {
 			padding-left: 10px;
 			max-height: unset;
-
 		}
 
 		.data-date {
 			position: unset;
 			text-align: left;
-
-
 		}
 
 	}
 </style>
 @endsection
 @section('content')
-
-<!-- Start Bradcaump area -->
+<!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 <div class="ht__bradcaump__area bg-5" data-black-overlay="7">
 	<div class="ht__bradcaump__wrap">
 		<div class="container">
@@ -260,15 +266,20 @@
 	<div class="container">
 		<div class="row" style="margin-bottom: 30px;">
 			<div class="col-md-12">
-				<h2 style="margin-bottom: 10px;">Overview</h2>
+				<h2 style="margin-bottom: 10px;margin-top:10px;">Overview</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias impedit ex voluptatem ad
-					nostrum voluptate facere assumenda a aut, maxime optio velit? Molestiae sed ipsum explicabo ratione
-					inventore sequi provident, impedit nam ab vel earum ipsa veniam distinctio iusto id dicta accusamus
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias impedit ex voluptatem
+					ad
+					nostrum voluptate facere assumenda a aut, maxime optio velit? Molestiae sed ipsum explicabo
+					ratione
+					inventore sequi provident, impedit nam ab vel earum ipsa veniam distinctio iusto id dicta
+					accusamus
 					aliquid. Quidem voluptate repellendus, placeat accusantium similique ad tenetur recusandae.
-					Praesentium ipsa quidem maiores perspiciatis dolore ipsum ullam? Quisquam doloremque modi voluptate
+					Praesentium ipsa quidem maiores perspiciatis dolore ipsum ullam? Quisquam doloremque modi
+					voluptate
 					iusto rem, illum temporibus repellat perspiciatis, quo corporis eos repellendus, ipsam facere
-					similique quasi tempore saepe ipsa voluptatibus. Eum voluptatum numquam sunt velit minus quibusdam
+					similique quasi tempore saepe ipsa voluptatibus. Eum voluptatum numquam sunt velit minus
+					quibusdam
 					\
 				</p>
 
@@ -293,10 +304,13 @@
 						<li class="event">
 							<p class="data-date">day2</p>
 							<h3>Creative Component Launched</h3>
-							<p>"We can be all things to all people! " Lorem ipsum dolor sit amet consectetur adipisicing
+							<p>"We can be all things to all people! " Lorem ipsum dolor sit amet consectetur
+								adipisicing
 								elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error cum, quos sint tempore
-								eaque ab aspernatur repellendus iusto exercitationem. Voluptatum, libero eos? Tempore
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error cum, quos sint
+								tempore
+								eaque ab aspernatur repellendus iusto exercitationem. Voluptatum, libero eos?
+								Tempore
 								non minus excepturi veritatis sint sunt deserunt. 📣</p>
 						</li>
 						<li class="event" id="date">
@@ -312,19 +326,22 @@
 
 							<p>"We design and build from scratch!" 📣
 								<p />
-								<p>When we say <em><strong>100% custom</strong></em> we mean it— and we build all sites
+								<p>When we say <em><strong>100% custom</strong></em> we mean it— and we build all
+									sites
 									on the
 									Squarespace Developer platform.
 									<p />
-									<p>Did you know that all of our pixels are hand-forged from the rarest of subpixels
+									<p>Did you know that all of our pixels are hand-forged from the rarest of
+										subpixels
 										grown and
 										harvested in the <em>Nerd Forest</em>? <br>🤜💥🤛</p>
 
-									<p><strong>Our success can be measured by lives and brands enhanced by 9+ years of
+									<p><strong>Our success can be measured by lives and brands enhanced by 9+ years
+											of
 											100%
 											Squarespace-focused service!</strong></p>
 
-									<p><a href="https://www.squareflair.com">squareflair.com</a></p>
+									<p><a href="#">arnra.com</a></p>
 						</li>
 					</ul>
 				</div>
@@ -367,28 +384,17 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 mt-20-included-excluded">
 				<h2>Included & Excluded</h2>
 				<ol>
 					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, natus!</li>
 					<li>Lorem ipsum dolor sit.</li>
-					<li>Lorem ipsum dolor sit.lorem10 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+					<li>Lorem ipsum dolor sit.lorem10 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Ullam,
 						ut?</li>
 				</ol>
 			</div>
 		</div>
 	</div>
-</section> <!-- End Special Packages Area -->
-{{-- <script type="text/javascript">
-	$(document).ready(function(){
-      $('.your-class').slick({
-  arrows: true,
-  prevArrow:"<button type='button' class='slick-prev pull-left'><-</button>",
-nextArrow:"<button type='button' class='slick-next pull-right'>-></button>"
-});
-	});
-
-
-</script> --}}
-
+</section>
 @endsection

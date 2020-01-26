@@ -57,7 +57,7 @@ Route::prefix('admin')->group(function () {
     ]);
 });
 
-// Route::get('/packages', 'PackageController@index');
+Route::get('/admin/packages', 'PackageController@index');
 Route::get('/packages/create', 'PackageController@create');
 // Route::get('/packages/store', 'PackageController@store');
 // Route::get('/packages/{package}/show', 'PackageController@show');

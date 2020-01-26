@@ -46,7 +46,7 @@
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-12">
                         <div class="logo">
-                            <a href="/"><img src="logo1.png" height="60" alt="logo"></a>
+                            <a href="/"><img src="{{url('/logo1.png')}}" height="60" alt="logo"></a>
                             <!-- <a href="/">ARNA Travel</a> -->
                         </div>
                     </div>
@@ -94,7 +94,8 @@
             <!-- Mobile-menu-area start -->
             <div class="mobile-menu-area hidden-md hidden-lg hidden-sm">
                 <div class="fluid-container mobile-menu-container">
-                    <div class="mobile-logo"><a href="/"><img src="logo1.png" height="60" alt="Mobile logo"></a></div>
+                    <div class="mobile-logo"><a href="/"><img src="{{url('/logo1.png')}}" height="60"
+                                alt="Mobile logo"></a></div>
                     <div class="mobile-menu clearfix">
                         <nav id="mobile_dropdown">
                             <ul>
@@ -125,7 +126,7 @@
                                 <div class="footer__wedget">
                                     <div class="footer__logo">
                                         <a href="#">
-                                            <img src="logo1.png" height="60" alt="logo">
+                                            <img src="{{url('/logo1.png')}}" height="60" alt="logo">
                                         </a>
                                     </div>
                                     <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit,
@@ -252,11 +253,11 @@
     <!-- Bootstrap framework js -->
     <script src="{{asset("js/bootstrap.min.js")}}"></script>
     <!-- All js plugins included in this file. -->
-    <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="{{url('/js/plugins.js')}}"></script>
+    <script src="{{url('/js/slick.min.js')}}"></script>
     <!-- Waypoints.min.js. -->
-    <script src="js/waypoints.min.js"></script>
+    <script src="{{url('/js/waypoints.min.js')}}"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
+    <script src="{{url('/js/main.js')}}"></script>
 
 </body>

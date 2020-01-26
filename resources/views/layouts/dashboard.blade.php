@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-12">
                         <div class="logo">
-                            <a href="/"><img src="logo1.png" height="80" alt="logo"></a>
+                            <a href="/"><img src="{{url('/logo1.png')}}" height="80" alt="logo"></a>
                             <!-- <a href="/">ARNA Travel</a> -->
                         </div>
                     </div>
@@ -95,7 +95,8 @@
             <!-- Mobile-menu-area start -->
             <div class="mobile-menu-area hidden-md hidden-lg hidden-sm">
                 <div class="fluid-container mobile-menu-container">
-                    <div class="mobile-logo"><a href="/"><img src="logo1.png" height="60" alt="Mobile logo"></a></div>
+                    <div class="mobile-logo"><a href="/"><img src="{{url('/logo1.png')}}" height="60"
+                                alt="Mobile logo"></a></div>
                     <div class="mobile-menu clearfix">
                         <nav id="mobile_dropdown">
                             <ul>
@@ -520,7 +521,7 @@
                                 <div class="footer__wedget">
                                     <div class="footer__logo">
                                         <a href="#">
-                                            <img src="logo1.jpg" height="60" alt="logo">
+                                            <img src="{{url('/logo1.png')}}" height="60" alt="logo">
                                         </a>
                                     </div>
                                     <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit,

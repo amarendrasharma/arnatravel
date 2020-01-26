@@ -16,20 +16,37 @@
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-info">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<div class="collapse navbar-collapse text-white" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Features</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Pricing</a>
+				</li>
+			</ul>
+	</nav>
 	<div class="container-fluid">
-		<div class="d-flex">
-			<div class="flex-grow-1 vh-100 w-25">
-				<ui>
-					<li>lom</li>
-					<li>sdsd</li>
-					<li>fgg</li>
-					<li>ty</li>
-					<li>ppp</li>
-				</ui>
-			</div>
+		<div class="row vh-100">
 			<div class="d-flex">
+				<div class=" bg-success mb-n5 w-25 ">
+					<ui>
+						<li>lom</li>
+						<li>sdsd</li>
+						<li>fgg</li>
+						<li>ty</li>
+						<li>ppp</li>
+					</ui>
+				</div>
+				<div class="d-flex w-75 overflow-auto">
 
-				@yield('content')
+					@yield('content')
+				</div>
 			</div>
 		</div>
 	</div>
