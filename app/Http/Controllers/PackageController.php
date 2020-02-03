@@ -11,7 +11,8 @@ class PackageController extends Controller
 
     public function index()
     {
-        return view('admin.package.index');
+        $packages = Package::all();
+        return view('admin.package.index', compact('packages'));
     }
 
 
@@ -23,25 +24,29 @@ class PackageController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $this->validate($request, [
             'banner' => ['file'],
             'desc' => ['string'],
             'overview' => ['string'],
             'title' => ['string', 'required'],
             'duration' => ['string', 'required'],
-            'slug' => ['string', 'nullable'],
+            // 'slug' => ['string', 'nullable'],
             'included' => ['string', 'nullable'],
-            'ammenities' => ['string', 'nullable'],
-            'status' => ['nullable']
+            // 'ammenities' => ['string', 'nullable'],
+            // 'status' => ['nullable']
         ]);
-
-        Package::create($request->all() + ['uuid' => Str::uuid()]);
+        $banner = $request->file('banner')->store('banner', 'public');
+        $x = $request->except('banner') + ['uuid' => Str::uuid(), 'banner' => $banner];
+        $y = Package::create($x);
+        return redirect('/admin/packages')->with('success', 'Your document has been uploaded.');
     }
 
 
     public function show(Package $package)
     {
-        //
+
+        return view('admin.package.show', compact('package'));
     }
 
 

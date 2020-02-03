@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Package;
 use Illuminate\Http\Request;
+use App\Package;
 
 class PackageController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $packages = Package::all();
-        return view('front.packages.index', compact('packages'));
+        //
     }
 
     /**
@@ -42,10 +45,9 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($uuid)
+    public function show($id)
     {
-        $package = Package::where('uuid', $uuid)->first();
-        return view('front.packages.show', compact('package'));
+        //
     }
 
     /**

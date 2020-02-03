@@ -1,18 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Front;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Package;
 use Illuminate\Http\Request;
 
-class PackageController extends Controller
+class DashboardController extends Controller
 {
 
     public function index()
     {
-        $packages = Package::all();
-        return view('front.packages.index', compact('packages'));
+        return view('admin.index');
     }
 
     /**
@@ -42,10 +40,9 @@ class PackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($uuid)
+    public function show($id)
     {
-        $package = Package::where('uuid', $uuid)->first();
-        return view('front.packages.show', compact('package'));
+        //
     }
 
     /**

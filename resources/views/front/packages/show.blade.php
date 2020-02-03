@@ -266,23 +266,16 @@
 	<div class="container">
 		<div class="row" style="margin-bottom: 30px;">
 			<div class="col-md-12">
+				@if(Session::has('success'))
+				<p class=" mt-5 alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}
+				</p>
+				@endif
+			</div>
+			<div class="col-md-12">
 				<h2 style="margin-bottom: 10px;margin-top:10px;">Overview</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi molestias impedit ex voluptatem
-					ad
-					nostrum voluptate facere assumenda a aut, maxime optio velit? Molestiae sed ipsum explicabo
-					ratione
-					inventore sequi provident, impedit nam ab vel earum ipsa veniam distinctio iusto id dicta
-					accusamus
-					aliquid. Quidem voluptate repellendus, placeat accusantium similique ad tenetur recusandae.
-					Praesentium ipsa quidem maiores perspiciatis dolore ipsum ullam? Quisquam doloremque modi
-					voluptate
-					iusto rem, illum temporibus repellat perspiciatis, quo corporis eos repellendus, ipsam facere
-					similique quasi tempore saepe ipsa voluptatibus. Eum voluptatum numquam sunt velit minus
-					quibusdam
-					\
+					{{$package->overview}}
 				</p>
-
 			</div>
 		</div>
 		<div class="row">
@@ -350,7 +343,11 @@
 				<div>
 					<div class=" bg-cat-3 custom-padding-me">
 						<h2 class="contact__title">Booking <span class="text-theme"> Enquiry</span></h2>
-						<form id="contact-form" action="/contact" method="post">
+						@if(Session::has('success'))
+						<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}
+						</p>
+						@endif
+						<form id="contact-form" action="/contact/{{$package->uuid}}" method="post">
 							@csrf
 							<div class="single-contact-form">
 								<div class="contact-box">
@@ -386,13 +383,9 @@
 		<div class="row">
 			<div class="col-md-8 mt-20-included-excluded">
 				<h2>Included & Excluded</h2>
-				<ol>
-					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, natus!</li>
-					<li>Lorem ipsum dolor sit.</li>
-					<li>Lorem ipsum dolor sit.lorem10 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Ullam,
-						ut?</li>
-				</ol>
+				<p>
+					{{$package->included}}
+				</p>
 			</div>
 		</div>
 	</div>

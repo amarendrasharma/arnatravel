@@ -1,7 +1,9 @@
 <?php
 
+use App\Package;
 use Illuminate\Support\Facades\Mail;
-use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Http\Request;
+
 
 Route::get('/', function () {
     // return redirect()->route('about', ['pid' => 2, 'pname' => 'phpzone.in', 'year' => '2018']);
@@ -31,13 +33,21 @@ Route::get('/about', function () {
 
 
 Route::get('/packages', 'Front\PackageController@index');
+Route::post('/packages/status/{id}', function (Request $request, $id) {
+    $package = Package::find($id);
+    $x = Package::where('id', $id)->update(['status' => !$package->status]);
+    return response()->json($x);
+});
+Route::get('/packages/details/{uuid}', 'Front\PackageController@show');
 Route::get('/packages/{id}', 'Front\PackageController@show');
+
+Route::get('/packages/show/{package}', 'PackageController@show');
 
 Route::get('/contact', function () {
     return view('front.contact');
 })->name('contact');
 
-Route::post('/contact', 'ContactController@store')->name('contact.store');
+Route::post('/contact/{uuid}', 'ContactController@store')->name('contact.store');
 
 Route::get('/dash', function () {
     return view('layouts.dashboard');
@@ -51,13 +61,16 @@ Route::get('/gallery', function () {
 // admin
 Route::get('/contact/all', 'ContactController@index');
 
-Route::prefix('admin')->group(function () {
-    Route::resources([
-        'packages' => 'PackageController'
-    ]);
-});
+// Route::prefix('admin')->group(function () {
+//     Route::resources([
+//         'packages' => 'PackageController'
+//     ]);
+// });
 
+Route::get('/admin/dashboard', 'Admin\DashboardController@index');
 Route::get('/admin/packages', 'PackageController@index');
+Route::get('/admin/packages/create', 'PackageController@create')->name('package.create');
+Route::post('/admin/packages', 'PackageController@store');
 Route::get('/packages/create', 'PackageController@create');
 // Route::get('/packages/store', 'PackageController@store');
 // Route::get('/packages/{package}/show', 'PackageController@show');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
@@ -29,17 +31,21 @@ class ContactController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(Request $request, $uuid)
     {
+        $request['package_uuid'] = $uuid;
         $this->validate($request, [
+            'uuid' => ['exists:packages,uuid'],
             'name' => ['nullable'],
             'email' => ['email', 'nullable'],
             'phone' => ['required'],
             'msg' => ['required'],
+            'person' => ["nullable"]
         ]);
         $contactCreated = Contact::create($request->all());
         if ($contactCreated) {
-            return redirect()->back()->with('success', 'Thanks. We will back to you');
+            Session::flash('success', 'Thank you. We will back to you');
+            return redirect()->back();
         }
     }
 
