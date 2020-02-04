@@ -4,6 +4,10 @@ use App\Package;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
+Route::post('/testing/data', function (Request $request) {
+    dd($request->itinarary);
+    $someArray = json_encode($request->itinarary);
+});
 Route::get('/testing', 'TestingController@index');
 Route::get('/testing/{user}', 'TestingController@show')->name('users.show');
 Route::delete('/testing', 'TestingController@destroy')->name('users.destroy');

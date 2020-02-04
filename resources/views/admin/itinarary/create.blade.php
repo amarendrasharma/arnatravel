@@ -244,6 +244,7 @@
 		<div class="row">
 			<div class="col-md-7">
 				<h2>Itinerary</h2>
+				<button class="btn btn-primary" onclick="send()">Confirm</button>
 			</div>
 			<div class="col-md-7" style="margin-bottom: 50px;">
 				<div id="timeline-content">
@@ -267,23 +268,49 @@
 			</div>
 			<div class="col-md-5">
 				<div class="form-group">
-					<input class="form-control" id="day" name="day" value="" />
+					<input class="form-control" id="day" name="day" value="sdsd" />
 				</div>
 				<div class="form-group">
-					<input class="form-control" id="title" name="title" value="" />
+					<input class="form-control" id="title" name="title" value="ww ewe wewe wesd asmvas" />
 				</div>
 				<div class="form-group">
-					<input class="form-control" id="desc" name="desc" value="" />
+
+					<input class="form-control" id="desc" name="desc"
+						value="Lorem ipsum dolor sit amet.lorem9 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis." />
 				</div>
 				<button onclick="add()">Add</button>
 			</div>
 		</div>
 	</div>
 	<script>
+		var itinarary = [];
+		console.log(itinarary);
+		var fdata = new FormData();
+		function send() {
+			var fdata1 = new FormData();
+			fdata1.append('itinarary',itinarary);
+			fetch('/testing/data',{
+					headers: {
+						'X-CSRF-Token': document.querySelector(`meta[name='csrf-token']`).content
+					}, 
+					method: 'POST',
+					body:JSON.stringify(itinarary)
+				});
+		}
 		function add() {
-			let day = document.getElementById('day').value;
+			let day = document.getElementById('day').value ;
 			let title = document.getElementById('title').value;
 			let desc = document.getElementById('desc').value;
+				itinarary.push(JSON.stringify({
+					'day' : day,
+					'title' : title,
+					'desc' : desc
+				}));
+				// fdata.append('day',day);
+				// fdata.append('title',title);
+				// fdata.append('desc',desc);
+				// itinarary.push(fdata);
+				console.log(itinarary);
 				var listElem =  document.createElement("li");
 				listElem.setAttribute("class","event");
 				listElem.addEventListener('dblclick', function(e){
@@ -306,6 +333,34 @@
 				listElem.appendChild(ptag);
 				console.log(listElem);
 				let ooo = document.getElementById('ooo').appendChild(listElem);
+		}
+
+		function printHtml() {
+				let day = document.getElementById('day').value;
+				let title = document.getElementById('title').value;
+				let desc = document.getElementById('desc').value;
+				let itinarary = [];
+				itinarary.push({
+					'day' : day,
+					// 'title' : title,
+					// 'desc' : desc
+				});
+			let result = itinarary.forEach(itinarar => {
+				let listElm = document.createElement('li');
+				listElm.setAttribute('class','event');
+				document.getElementById('ooo').appendChild(listElm);
+					// document.getElementById('ooo').append(addItinarary(itinarar.day));
+
+				});
+
+		}
+		function addItinarary(day, title, desc) {
+			return `
+						<li class="event" id="date">
+							<p class="data-date">${day}</p>
+						</li>
+			`;
+
 		}
 	</script>
 </section>
