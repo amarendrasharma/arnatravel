@@ -4,7 +4,9 @@ use App\Package;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
-
+Route::get('/testing', 'TestingController@index');
+Route::get('/testing/{user}', 'TestingController@show')->name('users.show');
+Route::delete('/testing', 'TestingController@destroy')->name('users.destroy');
 Route::get('/', function () {
     // return redirect()->route('about', ['pid' => 2, 'pname' => 'phpzone.in', 'year' => '2018']);
     // return view('front.index');
@@ -30,8 +32,10 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('front.about');
 })->name('about');
-
-
+Route::get('/packages/{package}/itinarary', function (Package $package) {
+    $package = collect($package->only('id', 'uuid'))->first();
+    return view('admin.itinarary.create', compact('package'));
+});
 Route::get('/packages', 'Front\PackageController@index');
 Route::post('/packages/status/{id}', function (Request $request, $id) {
     $package = Package::find($id);

@@ -36,4 +36,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $appends = ['links'];
+
+    public function getLinksAttribute()
+    {
+        return [
+            'show' => route('users.show', $this->id),
+            'edit' => '',
+            'delete' => ''
+        ];
+    }
 }

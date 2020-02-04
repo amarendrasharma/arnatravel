@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Itinerary;
+use App\Package;
 use Illuminate\Http\Request;
 
 class ItineraryController extends Controller
@@ -22,9 +23,9 @@ class ItineraryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create($package)
+    {;
+        return $package;
     }
 
     /**

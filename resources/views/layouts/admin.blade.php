@@ -13,6 +13,8 @@
 	{{-- <link rel="stylesheet" href="{{asset("css/bootstrap4.min.css")}}" /> --}}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	@yield('script')
+	@yield('css')
+	{{-- 
 	<style>
 		.hidden {
 			display: none;
@@ -57,7 +59,7 @@
 		.ease-out {
 			transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 		}
-	</style>
+	</style> --}}
 </head>
 
 <body>
