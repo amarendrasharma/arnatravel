@@ -280,64 +280,24 @@
 		</div>
 		<div class="row">
 			<div class="col-md-7">
-
 				<h2>Itinerary</h2>
 			</div>
 			<div class="col-md-7" style="margin-bottom: 50px;">
+				@if($package->itineraries->count() > 0)
 				<div id="timeline-content">
-
 					<ul class="timeline">
-						<li class="event">
-							<p class="data-date">
-								Day 1
-							</p>
-							<h3>Dinosaurs Roamed the Earth</h3>
-							<p>RAWWWWWWRRR 🐢🦂</p>
-						</li>
-						<li class="event">
-							<p class="data-date">day2</p>
-							<h3>Creative Component Launched</h3>
-							<p>"We can be all things to all people! " Lorem ipsum dolor sit amet consectetur
-								adipisicing
-								elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error cum, quos sint
-								tempore
-								eaque ab aspernatur repellendus iusto exercitationem. Voluptatum, libero eos?
-								Tempore
-								non minus excepturi veritatis sint sunt deserunt. 📣</p>
-						</li>
+						@foreach ($package->itineraries as $itinerary)
 						<li class="event" id="date">
-							<p class="data-date">day3</p>
-							<h3>Squareflair was Born</h3>
-							<p></p>
-							<p>"We can be all things to Squarespace users!" 📣</p>
+							<p class="data-date">{{$itinerary->days}}</p>
+							<h3>{{$itinerary->title}}</h3>
+							<p>{{$itinerary->desc}}</p>
 						</li>
-
-						<li class="event">
-							<p class="data-date">day4</p>
-							<h3>Squareflair Today</h3>
-
-							<p>"We design and build from scratch!" 📣
-								<p />
-								<p>When we say <em><strong>100% custom</strong></em> we mean it— and we build all
-									sites
-									on the
-									Squarespace Developer platform.
-									<p />
-									<p>Did you know that all of our pixels are hand-forged from the rarest of
-										subpixels
-										grown and
-										harvested in the <em>Nerd Forest</em>? <br>🤜💥🤛</p>
-
-									<p><strong>Our success can be measured by lives and brands enhanced by 9+ years
-											of
-											100%
-											Squarespace-focused service!</strong></p>
-
-									<p><a href="#">arnra.com</a></p>
-						</li>
+						@endforeach
 					</ul>
 				</div>
+				@else
+				<p>Empty itineraries</p>
+				@endif
 			</div>
 			<div class="col-md-5">
 				<div>

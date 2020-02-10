@@ -21,7 +21,7 @@
 			@foreach ($packages as $package)
 			<tr>
 				<td>
-					<a href="/packages/show/{{$package->id}}">{{$package->title}}</a>
+					<a href="/admin/packages/{{$package->id}}">{{$package->title}}</a>
 				</td>
 				<td>
 					{{$package->desc}}

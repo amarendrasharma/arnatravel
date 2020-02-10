@@ -284,6 +284,7 @@
 			<hr>
 		</div>
 		<div class="col-md-8 ml-auto" style="margin-bottom: 50px;">
+			@if($package->itineraries->count() > 0)
 			<div id="timeline-content">
 				<ul class="timeline">
 					@foreach ($package->itineraries as $item)
@@ -296,6 +297,9 @@
 
 				</ul>
 			</div>
+			@else
+			<p>Empty</p>
+			@endif
 		</div>
 
 	</div>

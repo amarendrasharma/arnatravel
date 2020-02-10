@@ -45,6 +45,7 @@ class PackageController extends Controller
     public function show($uuid)
     {
         $package = Package::where('uuid', $uuid)->first();
+        $package = $package->load('itineraries');
         return view('front.packages.show', compact('package'));
     }
 

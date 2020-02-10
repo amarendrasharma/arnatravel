@@ -10,6 +10,7 @@ class DashboardController extends Controller
 
     public function index()
     {
+        return redirect('/admin/packages');
         return view('admin.index');
     }
 

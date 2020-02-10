@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('script')
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.5/dist/alpine.js" defer></script>
-<script src="https://gist.github.com/amarendrasharma/ecdd885c52f56dc477824792bb2d5693.js"></script>
 @endsection
 @section('content')
 <div class="container">
@@ -29,43 +28,29 @@
 					<div class="form-row">
 						<div class="col-md-11 mb-3">
 							<label for="validationServer01">Package Name</label>
-							<input type="text" class="form-control is-valid" id="validationServer01" value="Mark"
-								name="title" required>
-							<div class="valid-feedback">
-								Looks good!
-							</div>
+							<input type="text" class="form-control" id="validationServer01" value="Mark" name="title"
+								required>
+
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer01">Tag Line</label>
-							<input type="text" class="form-control is-valid" id="validationServer01" name="desc"
-								required>
-							<div class="valid-feedback">
-								Looks good!
-							</div>
+							<input type="text" class="form-control" id="validationServer01" name="desc" required>
+
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer02">Duration</label>
-							<input type="text" class="form-control is-valid" id="validationServer02" name="duration"
-								required>
-							<div class="valid-feedback">
-								Looks good!
-							</div>
+							<input type="text" class="form-control" id="validationServer02" name="duration" required>
+
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer03">Overview</label>
-							<textarea class="form-control is-valid" id="validationServer03" name="overview"
-								rows="3"> </textarea>
-							<div class="valid-feedback">
-								Looks good!
-							</div>
+							<textarea class="form-control" id="validationServer03" name="overview" rows="3"> </textarea>
+
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer06">Included & Excluded</label>
-							<textarea class="form-control is-valid" id="validationServer06" name="included"
-								rows="3"> </textarea>
-							<div class="valid-feedback">
-								Looks good!
-							</div>
+							<textarea class="form-control" id="validationServer06" name="included" rows="3"> </textarea>
+
 						</div>
 					</div>
 					<div class="form-row">

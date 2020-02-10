@@ -238,25 +238,17 @@
 </style>
 @endsection
 @section('content')
-{{$package ?? "hh"}}
 <section class="special__package pb-100 bg-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-7">
-				<h2>Itinerary</h2>
+				<h2>Itinerary Create</h2>
 				<button class="btn btn-primary" onclick="send({{$package ?? 0}})">Confirm</button>
 			</div>
 			<div class="col-md-7" style="margin-bottom: 50px;">
 				<div id="timeline-content">
 					<ul class="timeline" id="ooo">
-						<li class="event">
-							<p class="data-date">day2</p>
-							<h3>Creative Component Launched</h3>
-							<p>"We can be all things to all people! " Lorem ipsum dolor sit amet consectetur
-								adipisicing
-								elit.
-								📣</p>
-						</li>
+
 						<li class="event" id="date">
 							<p class="data-date">day3</p>
 							<h3>Squareflair was Born</h3>
@@ -268,16 +260,18 @@
 			</div>
 			<div class="col-md-5">
 				<div class="form-group">
-					<input class="form-control" id="day" name="day" value="sdsd" />
+					<label>Day</label>
+					<input class="form-control" id="day" name="day" value="" />
 				</div>
 				<div class="form-group">
-					<input class="form-control" id="title" name="title" value="ww ewe wewe wesd asmvas" />
+					<label>Title</label>
+					<input class="form-control" id="title" name="title" value="" />
 				</div>
 				<div class="form-group">
-					<input class="form-control" id="desc" name="desc"
-						value="Lorem ipsum dolor sit amet.lorem9 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis." />
+					<label>Description</label>
+					<input class="form-control" id="desc" name="desc" value="" />
 				</div>
-				<button onclick="add()">Add</button>
+				<button onclick="add()" class="btn btn-success">Add to list</button>
 			</div>
 		</div>
 	</div>
@@ -288,7 +282,7 @@
 			// fdata1.append('itinarary',itinarary);
 		getFormData(fdata1, itinarary);
 		console.log(fdata1);
-			fetch(`/testing/${id}/data`,{
+			fetch(`/package/${id}/itinerary`,{
 					headers: {
 						'X-CSRF-Token': document.querySelector(`meta[name='csrf-token']`).content
 					}, 
@@ -300,21 +294,14 @@
 			let day = document.getElementById('day').value ;
 			let title = document.getElementById('title').value;
 			let desc = document.getElementById('desc').value;
-				itinarary.push({
+			(day && title && desc ) ? (function(){itinarary.push({
 					'days' : day,
 					'title' : title,
 					'desc' : desc
 				});
-				// fdata.append('day',day);
-				// fdata.append('title',title);
-				// fdata.append('desc',desc);
-				// itinarary.push(fdata);
-				console.log(itinarary);
 				var listElem =  document.createElement("li");
 				listElem.setAttribute("class","event");
 				listElem.addEventListener('dblclick', function(e){
-					console.log(e);
-					console.log(JSON.stringify(e));
 					listElem.remove();
 				});
 				var newtext = document.createTextNode(desc);
@@ -331,7 +318,8 @@
 				listElem.appendChild(titleh3);
 				listElem.appendChild(ptag);
 				console.log(listElem);
-				let ooo = document.getElementById('ooo').appendChild(listElem);
+				let ooo = document.getElementById('ooo').appendChild(listElem);})()
+				: (function(){alert('Fill up first'); return;})();
 		}
 
 		function printHtml() {

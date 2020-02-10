@@ -26,9 +26,10 @@ class ItineraryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($package)
+    public function create(Package $package)
     {;
-        return $package;
+        $package = collect($package->only('id', 'uuid', 'title'))->first();
+        return view('admin.itinarary.create', compact('package'));
     }
 
     /**

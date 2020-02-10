@@ -4,7 +4,8 @@ use App\Package;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
-Route::post('/testing/{id}/data', 'ItineraryController@store');
+Route::post('/package/{id}/itinerary', 'ItineraryController@store');
+Route::get('/package/{package}/itinerary', 'ItineraryController@create');
 Route::get('/testing', 'TestingController@index');
 Route::get('/testing/{user}', 'TestingController@show')->name('users.show');
 Route::delete('/testing', 'TestingController@destroy')->name('users.destroy');
@@ -48,10 +49,7 @@ Route::get('/packages/{id}', 'Front\PackageController@show');
 
 // Route::get('/packages/show/{package}', 'PackageController@show');
 
-Route::get('/contact', function () {
-    return view('front.contact');
-})->name('contact');
-
+Route::get('/contact', 'ContactController@create')->name('contact.create');
 Route::post('/contact/{uuid}', 'ContactController@store')->name('contact.store');
 
 Route::get('/dash', function () {
