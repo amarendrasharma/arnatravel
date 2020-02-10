@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Itinerary;
 use App\Package;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 
 class ItineraryController extends Controller
 {
@@ -34,9 +37,13 @@ class ItineraryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $itineraries = collect($request->all());
+        $itineraries = $itineraries->map(function ($itinerary) use ($id) {
+            return  array_merge($itinerary, ['uuid' => Str::uuid(), 'package_id' => $id]);
+        });
+        DB::table('itineraries')->insert($itineraries->toArray());
     }
 
     /**

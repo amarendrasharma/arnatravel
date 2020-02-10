@@ -4,10 +4,7 @@ use App\Package;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
-Route::post('/testing/data', function (Request $request) {
-    dd($request->itinarary);
-    $someArray = json_encode($request->itinarary);
-});
+Route::post('/testing/{id}/data', 'ItineraryController@store');
 Route::get('/testing', 'TestingController@index');
 Route::get('/testing/{user}', 'TestingController@show')->name('users.show');
 Route::delete('/testing', 'TestingController@destroy')->name('users.destroy');
@@ -49,7 +46,7 @@ Route::post('/packages/status/{id}', function (Request $request, $id) {
 Route::get('/packages/details/{uuid}', 'Front\PackageController@show');
 Route::get('/packages/{id}', 'Front\PackageController@show');
 
-Route::get('/packages/show/{package}', 'PackageController@show');
+// Route::get('/packages/show/{package}', 'PackageController@show');
 
 Route::get('/contact', function () {
     return view('front.contact');
@@ -81,7 +78,7 @@ Route::get('/admin/packages/create', 'PackageController@create')->name('package.
 Route::post('/admin/packages', 'PackageController@store');
 Route::get('/packages/create', 'PackageController@create');
 // Route::get('/packages/store', 'PackageController@store');
-// Route::get('/packages/{package}/show', 'PackageController@show');
+Route::get('/admin/packages/{package}', 'PackageController@show');
 // Route::get('/packages/{package}/edit', 'PackageController@edit');
 // Route::get('/packages/delete/{package}', 'PackageController@delete');
 

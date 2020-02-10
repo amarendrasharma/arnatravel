@@ -244,7 +244,7 @@
 		<div class="row">
 			<div class="col-md-7">
 				<h2>Itinerary</h2>
-				<button class="btn btn-primary" onclick="send()">Confirm</button>
+				<button class="btn btn-primary" onclick="send({{$package ?? 0}})">Confirm</button>
 			</div>
 			<div class="col-md-7" style="margin-bottom: 50px;">
 				<div id="timeline-content">
@@ -274,7 +274,6 @@
 					<input class="form-control" id="title" name="title" value="ww ewe wewe wesd asmvas" />
 				</div>
 				<div class="form-group">
-
 					<input class="form-control" id="desc" name="desc"
 						value="Lorem ipsum dolor sit amet.lorem9 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis." />
 				</div>
@@ -284,28 +283,28 @@
 	</div>
 	<script>
 		var itinarary = [];
-		console.log(itinarary);
-		var fdata = new FormData();
-		function send() {
+		function send(id) {
 			var fdata1 = new FormData();
-			fdata1.append('itinarary',itinarary);
-			fetch('/testing/data',{
+			// fdata1.append('itinarary',itinarary);
+		getFormData(fdata1, itinarary);
+		console.log(fdata1);
+			fetch(`/testing/${id}/data`,{
 					headers: {
 						'X-CSRF-Token': document.querySelector(`meta[name='csrf-token']`).content
 					}, 
 					method: 'POST',
-					body:JSON.stringify(itinarary)
+					body:fdata1
 				});
 		}
 		function add() {
 			let day = document.getElementById('day').value ;
 			let title = document.getElementById('title').value;
 			let desc = document.getElementById('desc').value;
-				itinarary.push(JSON.stringify({
-					'day' : day,
+				itinarary.push({
+					'days' : day,
 					'title' : title,
 					'desc' : desc
-				}));
+				});
 				// fdata.append('day',day);
 				// fdata.append('title',title);
 				// fdata.append('desc',desc);
@@ -354,14 +353,40 @@
 				});
 
 		}
-		function addItinarary(day, title, desc) {
-			return `
-						<li class="event" id="date">
-							<p class="data-date">${day}</p>
-						</li>
-			`;
-
-		}
+		 function getFormData(formData, data, previousKey) {
+            if (data instanceof Object) {
+                Object.keys(data).forEach(key => {
+                    const value = data[key];
+                    if (value instanceof Blob) {
+                        formData.append(key, value);
+                    }
+                    if (value instanceof Object && !Array.isArray(value)) {
+                        return getFormData(formData, value, key);
+                    }
+                    if (previousKey) {
+                        key = `${previousKey}[${key}]`;
+                    }
+                    if (Array.isArray(value)) {
+                        value.forEach(val => {
+                            if (
+                                key == "event_keywords" ||
+                                key == "meta_keywords"
+                            ) {
+                                formData.append(`${key}[]`, val);
+                            } else {
+                                formData.append(
+                                    `${key}[]`,
+                                    JSON.stringify(val)
+                                );
+                            }
+                        });
+                    } else {
+                        formData.append(key, value || "");
+                    }
+				});
+				return formData;
+            }
+        }
 	</script>
 </section>
 @endsection

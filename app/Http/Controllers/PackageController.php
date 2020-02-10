@@ -45,7 +45,8 @@ class PackageController extends Controller
 
     public function show(Package $package)
     {
-
+        $p = $package;
+        $package = $p->load('itineraries');
         return view('admin.package.show', compact('package'));
     }
 
