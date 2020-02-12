@@ -261,15 +261,16 @@
 			<div class="col-md-5">
 				<div class="form-group">
 					<label>Day</label>
-					<input class="form-control" id="day" name="day" value="" />
+					<input class="form-control" id="day" name="day" value="" required />
+
 				</div>
 				<div class="form-group">
 					<label>Title</label>
-					<input class="form-control" id="title" name="title" value="" />
+					<input class="form-control" id="title" name="title" value="" required />
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<input class="form-control" id="desc" name="desc" value="" />
+					<input class="form-control" id="desc" name="desc" value="" required />
 				</div>
 				<button onclick="add()" class="btn btn-success">Add to list</button>
 			</div>

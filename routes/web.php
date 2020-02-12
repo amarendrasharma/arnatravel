@@ -50,6 +50,7 @@ Route::get('/packages/{id}', 'Front\PackageController@show');
 // Route::get('/packages/show/{package}', 'PackageController@show');
 
 Route::get('/contact', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@create')->name('contact.store');
 Route::post('/contact/{uuid}', 'ContactController@store')->name('contact.store');
 
 Route::get('/dash', function () {

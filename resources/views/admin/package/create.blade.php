@@ -5,6 +5,9 @@
 @section('content')
 <div class="container">
 	<div class="row">
+		<h3>
+			Package Create
+		</h3>
 		<div class="col-md-12">
 			<form method="POST" enctype="multipart/form-data" action="/admin/packages">
 				@csrf
@@ -28,29 +31,39 @@
 					<div class="form-row">
 						<div class="col-md-11 mb-3">
 							<label for="validationServer01">Package Name</label>
-							<input type="text" class="form-control" id="validationServer01" value="Mark" name="title"
-								required>
+							<input type="text" class="form-control" id="validationServer01" value="" name="title">
+							@error('title')
+							<div class="alert alert-danger">{{ $message }}</div>
+							@enderror
 
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer01">Tag Line</label>
-							<input type="text" class="form-control" id="validationServer01" name="desc" required>
-
+							<input type="text" class="form-control" id="validationServer01" name="desc">
+							@error('desc')
+							<div class="alert alert-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer02">Duration</label>
-							<input type="text" class="form-control" id="validationServer02" name="duration" required>
-
+							<input type="text" class="form-control" id="validationServer02" name="duration">
+							@error('duration')
+							<div class="alert alert-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer03">Overview</label>
 							<textarea class="form-control" id="validationServer03" name="overview" rows="3"> </textarea>
-
+							@error('overview')
+							<div class="alert alert-danger">{{ $message }}</div>
+							@enderror
 						</div>
 						<div class="col-md-11 mb-3">
 							<label for="validationServer06">Included & Excluded</label>
 							<textarea class="form-control" id="validationServer06" name="included" rows="3"> </textarea>
-
+							@error('included')
+							<div class="alert alert-danger">{{ $message }}</div>
+							@enderror
 						</div>
 					</div>
 					<div class="form-row">

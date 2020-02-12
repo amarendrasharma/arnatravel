@@ -251,8 +251,9 @@
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="section__title text-center">
                             <h2 class="title__line">our <span class="text-theme">services</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt utllaf </p>
+                            <p> We provides vehicle in whole Northeast state and also provide tour packages hotel
+                                booking , air tickets and train tickets in all over the India.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -268,8 +269,9 @@
                                     </div>
                                     <div class="service__details">
                                         <h4><a href="#">Book Cheap Online</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem
-                                            sequi nesciunt. Neque porro quisquam est</p>
+                                        <p> We providing our satisfactory service to our customers. We arrange tours for
+                                            domestic inbound and pilgrim tourists by taking under consideration the
+                                            desire and budget of tourist.</p>
                                     </div>
                                 </div>
                                 <!-- End Single Service -->
@@ -280,9 +282,11 @@
                                         <i class="flaticon-transport icon"></i>
                                     </div>
                                     <div class="service__details">
-                                        <h4><a href="#">Taxi Cap Booking</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem
-                                            sequi nesciunt. Neque porro quisquam est</p>
+                                        <h4><a href="#">Taxi Cab Booking</a></h4>
+                                        <p>We provide Taxi Cab in all the places over northeast. Our main goal shows
+                                            safe and successful journey to all the customers. All the drivers act as a
+                                            tour guides and they are very much experienced. Vehicle are listed they are
+                                            – Bolero , Innova , Swift Dzire ,Tempo Traveler , Bus etc.</p>
                                     </div>
                                 </div>
                                 <!-- End Single Service -->
@@ -293,15 +297,22 @@
                                     </div>
                                     <div class="service__details">
                                         <h4><a href="#">Amazing Tour</a></h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem
-                                            sequi nesciunt. Neque porro quisquam est</p>
+
+                                        <p>
+                                            Amazing tours and packages also have good deals with the most of the hotels,
+                                            budgeted,luxary and heritage in all over Northeast. Maintained cordial
+                                            relations with the hotelers.</p>
                                     </div>
                                 </div>
                                 <!-- End Single Service -->
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 service-images">
-                            <img src="img/1.jpg" alt="service images">
+                            <div class="info-bg"
+                                style="background-image:url(img/1.jpg);height: 420px; background-size:contain;background-repeat: no-repeat;">
+                            </div>
+
+                            {{-- <img src="img/1.jpg" alt="service images" height="430"> --}}
                         </div>
                     </div>
                 </div>

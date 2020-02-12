@@ -312,10 +312,20 @@
 							<div class="single-contact-form">
 								<div class="contact-box">
 									<input type="text" name="name" placeholder="Your Name*">
-									<input type="tel" name="phone" placeholder="Mobile*">
 								</div>
 							</div>
-
+							<div class="single-contact-form">
+								<div class="contact-box">
+									<input type="tel" name="phone" placeholder="Mobile*">
+								</div>
+								@error('phone')
+								<div class="contact-box">
+									<p style="color:red;">
+										{{$message}}
+									</p>
+								</div>
+								@enderror
+							</div>
 							<div class="single-contact-form">
 								<div class="contact-box">
 									<input type="text" name="person" placeholder="No of People*">
@@ -324,7 +334,6 @@
 							<div class="single-contact-form">
 								<div class="contact-box ">
 									<input type="email" name="email" placeholder="email (optional)">
-
 								</div>
 							</div>
 							<div class="single-contact-form">
