@@ -223,14 +223,13 @@
                     <div class="col-md-offset-6">
                         <div class="welcome__inner">
                             <h2 class="title__line">welcome to <span class="text-theme">ARNA TRAVEL</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincidid ut
-                                labore et dolore magna aliqua. Utjij enim ad minim veniam, quis nostrud exercitatio
-                                ullamco laboris nisi utjjij aliquip ex ea commodo consequat.ed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore.ed do eiusmod tempor incididuenimdunt.</p>
-                            <p>Fipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoed doeiumod
-                                tempoquis</p>
+                            <p>ARNA TRAVELS located at Changsari, which is a town in Kamrup district of Assam, situated
+                                on the north bank of the Brahmaputra River. It should help improve the satisfaction,
+                                experience of tourist and to make arrangements for people who want to travel. , ARNA
+                                TRAVELS has been founded in Dec 2019 by a group of young and dynamic entrepreneurs. It
+                                aims to Provide a high standard of services suitable for individuals seeking relaxing,
+                                comfortable and memorable experiences.
+                            </p>
                             <ul class="social__icon social--bg--color">
                                 <li><a href="https://www.linkedin.com/"><i class="zmdi zmdi-linkedin"></i></a></li>
                                 <li><a href="https://www.pinterest.com/"><i class="zmdi zmdi-pinterest"></i></a></li>
@@ -535,9 +534,14 @@
                                             <img src="{{url('/logo1.png')}}" height="60" alt="logo">
                                         </a>
                                     </div>
-                                    <p class="footer__dtl">Lorem ipsum dolor sit amet, consectetur adipisicing ejlit,
-                                        sed do eiusmod tempor incididunt ut labore egtt dolore magna aliqua. Ut enim ad
-                                        minim veniam, quisgt nostrud exercitation ullamco laboris.</p>
+                                    <p class="footer__dtl">ARNA TRAVELS located at Changsari, which is a town
+                                        in Kamrup district of Assam, situated on the north bank of
+                                        the Brahmaputra River. It should help improve the satisfaction, experience of
+                                        tourist and to make arrangements for people who want to travel. , ARNA TRAVELS
+                                        has been founded in Dec 2019 by a group of young and dynamic entrepreneurs. It
+                                        aims to Provide a high standard of services suitable for individuals seeking
+                                        relaxing, comfortable and memorable experiences.
+                                    </p>
                                     <ul class="footer__social__icon">
                                         <li><a href="https://www.linkedin.com/"><i class="zmdi zmdi-linkedin"></i></a>
                                         </li>

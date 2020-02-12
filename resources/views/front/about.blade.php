@@ -40,9 +40,11 @@
                                 <i class="flaticon-telephone icon"></i>
                             </div>
                             <div class="service__details">
-                                <h4><a href="#">Online Booking Services</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem sequi
-                                    nesciunt. Neque porro quisquam est</p>
+                                <h4><a href="#">Taxi Cab Booking</a></h4>
+                                <p>We provide Taxi Cab in all the places over northeast. Our main goal shows
+                                    safe and successful journey to all the customers. All the drivers act as a
+                                    tour guides and they are very much experienced. Vehicle are listed they are
+                                    – Bolero , Innova , Swift Dzire ,Tempo Traveler , Bus etc.</p>
                             </div>
                         </div>
                         <!-- End Single Service -->
@@ -53,9 +55,11 @@
                                 <i class="flaticon-sleeping icon"></i>
                             </div>
                             <div class="service__details">
-                                <h4><a href="#">KIba kibi</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem sequi
-                                    nesciunt. Neque porro quisquam est</p>
+                                <h4><a href="#">Amazing Tour</a></h4>
+                                <p>
+                                    Amazing tours and packages also have good deals with the most of the hotels,
+                                    budgeted,luxary and heritage in all over Northeast. Maintained cordial
+                                    relations with the hotelers.</p>
                             </div>
                         </div>
                         <!-- End Single Service -->
@@ -65,22 +69,27 @@
                                 <i class="flaticon-transport icon"></i>
                             </div>
                             <div class="service__details">
-                                <h4><a href="#">Taxi Cap Booking</a></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dliluptatem sequi
-                                    nesciunt. Neque porro quisquam est</p>
+                                <h4><a href="#">Book Cheap Online</a></h4>
+                                <p> We providing our satisfactory service to our customers. We arrange tours for
+                                    domestic inbound and pilgrim tourists by taking under consideration the
+                                    desire and budget of tourist.</p>
                             </div>
                         </div>
                         <!-- End Single Service -->
+                        <div class="service">
+
+                        </div>
                     </div>
                     <!-- End Our Service -->
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 sm-mt-30 xs--mt--40">
                     <!-- Start Tab Menu -->
                     <ul class="view-mode" role="tablist">
-                        <li role="presentation" class="about"><a href="#about" role="tab" data-toggle="tab">about us</a>
+                        <li role="presentation" class="about active"><a href="#about" role="tab" data-toggle="tab">about
+                                us</a>
                         </li>
-                        <li role="presentation" class="mission active"><a href="#mission" role="tab"
-                                data-toggle="tab">our mission</a></li>
+                        <li role="presentation" class="mission "><a href="#mission" role="tab" data-toggle="tab">our
+                                mission</a></li>
                         <li role="presentation" class="vision"><a href="#vision" role="tab" data-toggle="tab">our
                                 vision</a></li>
                     </ul>
@@ -90,11 +99,12 @@
                         <!-- Start Single Content -->
                         <div role="tabpanel" id="about" class="single__tab__content tab-pane fade in active bg-cat-1">
                             <div class="tab__content__inner">
-                                <h2>Kiba kibi</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed dhynblo eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enbgvhnim adg minim veniam, quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquiexea commodo consequat. Duis aute
-                                    irure doloramet</p>
+                                <p>ARNA TRAVELS located at Changsari, which is a town in Kamrup district of Assam,
+                                    situated on the north bank of the Brahmaputra River. It should help improve the
+                                    satisfaction, experience of tourist and to make arrangements for people who want to
+                                    travel. , ARNA TRAVELS has been founded in Dec 2019 by a group of young and dynamic
+                                    entrepreneurs. It aims to Provide a high standard of services suitable for
+                                    individuals seeking relaxing, comfortable and memorable experiences</p>
                                 {{-- <ul class="tab__list">
                                     <li><a href="#"><i class="zmdi zmdi-long-arrow-right"></i>Tempor incididunt ut
                                             labore et dolore magna aliqua</a></li>
