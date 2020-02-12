@@ -53,7 +53,7 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="packages">
                         <div class="package__thumb">
-                            <img src="url('{{$package->banner}}')" alt="packages images" height="300" />
+                            <img src="{{url($package->banner)}}" alt="packages images" height="300" />
                             <div class="packages__hover__info">
                                 <div class="package__hover__inner">
                                     <h4><a href="#">{{$package->title}}</a></h4>
