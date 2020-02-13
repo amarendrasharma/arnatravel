@@ -275,7 +275,7 @@
 			</div>
 			<h5>Package Banner</h5>
 			<hr>
-			<img src="/{{$package->banner}}" height="300">
+			<img src="{{url($package->banner)}}" height="300">
 		</div>
 	</div>
 	<div class="row">
