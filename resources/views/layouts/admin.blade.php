@@ -75,7 +75,7 @@
 						<a class="nav-link" href="/admin/packages">Packages</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/admin/messages">Messages</a>
+						<a class="nav-link" href="/admin/contacts">Messages</a>
 					</li>
 				</ul>
 			</div>

@@ -50,7 +50,7 @@ Route::get('/packages/{id}', 'Front\PackageController@show');
 // Route::get('/packages/show/{package}', 'PackageController@show');
 
 Route::get('/contact', 'ContactController@create')->name('contact.create');
-Route::post('/contact', 'ContactController@create')->name('contact.store');
+Route::post('/contact', 'ContactController@store');
 Route::post('/contact/{uuid}', 'ContactController@store')->name('contact.store');
 
 Route::get('/dash', function () {
@@ -63,7 +63,7 @@ Route::get('/gallery', function () {
 })->name('gallery');
 
 // admin
-Route::get('/contact/all', 'ContactController@index');
+Route::get('/admin/contacts', 'ContactController@index');
 
 // Route::prefix('admin')->group(function () {
 //     Route::resources([

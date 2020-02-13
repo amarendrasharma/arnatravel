@@ -65,7 +65,14 @@
                                     @error('name')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
+
+                                </div>
+                            </div>
+                            <div class="single-contact-form">
+                                <div class="contact-box">
                                     <input type="tel" name="phone" placeholder="Mobile *">
+                                </div>
+                                <div class="contact-box">
                                     @error('phone')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -74,12 +81,16 @@
                             <div class="single-contact-form">
                                 <div class="contact-box ">
                                     <input type="email" name="email" placeholder="email (optional)">
-
                                 </div>
                             </div>
                             <div class="single-contact-form">
                                 <div class="contact-box message">
                                     <textarea name="msg" placeholder="Type Your Massage..."></textarea>
+                                </div>
+                                <div class="contact-box">
+                                    @error('msg')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="contact-btn">

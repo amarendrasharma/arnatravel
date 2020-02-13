@@ -9,33 +9,24 @@ use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $contacts = Contact::all();
-        return view('admin.contact', compact('contacts'));
+        $contacts = Contact::orderBy('created_at', 'desc')->simplePaginate(10);
+        return view('admin.message.index', compact('contacts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('front.contact');
     }
 
-    public function store(Request $request, $uuid)
+    public function store(Request $request, $uuid = null)
     {
         $request['package_uuid'] = $uuid;
         $this->validate($request, [
-            'uuid' => ['exists:packages,uuid'],
+            'uuid' => ['exists:packages,uuid', 'nullable'],
             'name' => ['nullable'],
             'email' => ['email', 'nullable'],
             'phone' => ['required'],
@@ -49,12 +40,6 @@ class ContactController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Contact  $contact
-     * @return \Illuminate\Http\Response
-     */
     public function show(Contact $contact)
     {
         //
