@@ -307,7 +307,7 @@
 						<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}
 						</p>
 						@endif
-						<form id="contact-form" action="/contact/{{$package->uuid}}" method="post">
+						<form id="contact-form" action="/contact" method="post">
 							@csrf
 							<div class="single-contact-form">
 								<div class="contact-box">
@@ -341,6 +341,7 @@
 									<textarea name="msg" placeholder="Type Your Massage..."></textarea>
 								</div>
 							</div>
+							<input type="hidden" name="package_uuid" value="{{$package->uuid}}" />
 							<div class="contact-btn">
 								<button type="submit" class="htc__contact__btn">SEND ENQUIRY</button>
 							</div>

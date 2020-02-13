@@ -22,17 +22,18 @@ class ContactController extends Controller
         return view('front.contact');
     }
 
-    public function store(Request $request, $uuid = null)
+    public function store(Request $request)
     {
-        $request['package_uuid'] = $uuid;
+
         $this->validate($request, [
-            'uuid' => ['exists:packages,uuid', 'nullable'],
+            'package_uuid' => ['sometimes', 'exists:packages,uuid'],
             'name' => ['nullable'],
             'email' => ['email', 'nullable'],
             'phone' => ['required'],
             'msg' => ['required'],
             'person' => ["nullable"]
         ]);
+
         $contactCreated = Contact::create($request->all());
         if ($contactCreated) {
             Session::flash('success', 'Thank you. We will back to you');
