@@ -1,37 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-  Template Name: Ramble Travel HTML Template.
-  Template URI: #
-  Description: Ramble is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design corporate, corporate any other purposes websites.
-  Author: HasTech
-  Author URI: https://themeforest.net/user/hastech/portfolio
-  Version: 1.0
-
------------------------------------------------------------------------------------
-
-
-/*-------------------------------------
-[  Table of contents  ]
----------------------------------------
-  01. Avoid `console` errors in browsers that lack a console.
-  02. Scrollup jquery   
-  03. WOW / scrolling animation 
-  04. Isotope PACKAGED v2.2.0
-  05. MeanMenu jquery Menu Plugin / Mobile Menu
-
-
-
-
-
-------------------------------------
-[ End table content ]
------------------------------------*/
-
-/*-------------------------------------------------------------
-  01. Avoid `console` errors in browsers that lack a console.
----------------------------------------------------------------*/
-
-
 (function() {
     var method;
     var noop = function () {};

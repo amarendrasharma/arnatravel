@@ -11,7 +11,7 @@ class PackageController extends Controller
 
     public function index()
     {
-        $packages = Package::all();
+        $packages = Package::where('status', 1)->get();
         return view('front.packages.index', compact('packages'));
     }
 

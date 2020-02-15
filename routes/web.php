@@ -4,8 +4,12 @@ use App\Package;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
-Route::post('/package/{id}/itinerary', 'ItineraryController@store');
-Route::get('/package/{package}/itinerary', 'ItineraryController@create');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', 'Admin\DashboardController@index');
+    Route::post('/package/{id}/itinerary', 'ItineraryController@store');
+    Route::get('/package/{package}/itinerary', 'ItineraryController@create');
+    Route::post('/itinerary/{itinerary}/delete', 'ItineraryController@destroy')->name('itinerary.delete');
+});
 Route::get('/testing', 'TestingController@index');
 Route::get('/testing/{user}', 'TestingController@show')->name('users.show');
 Route::delete('/testing', 'TestingController@destroy')->name('users.destroy');
@@ -71,12 +75,12 @@ Route::get('/admin/contacts', 'ContactController@index');
 //     ]);
 // });
 
-Route::get('/admin/dashboard', 'Admin\DashboardController@index');
 Route::get('/admin/packages', 'PackageController@index');
 Route::get('/admin/packages/create', 'PackageController@create')->name('package.create');
 Route::post('/admin/packages', 'PackageController@store');
 Route::get('/packages/create', 'PackageController@create');
 // Route::get('/packages/store', 'PackageController@store');
+Route::post('/admin/{package}/packages', 'PackageController@update');
 Route::get('/admin/packages/{package}', 'PackageController@show');
 // Route::get('/packages/{package}/edit', 'PackageController@edit');
 // Route::get('/packages/delete/{package}', 'PackageController@delete');

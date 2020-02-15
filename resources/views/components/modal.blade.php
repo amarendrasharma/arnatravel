@@ -1,6 +1,8 @@
 <div x-data="{{$xdata}}" x-cloak>
 	@if($type =='button')
-	<button type="button" x-on:click="isOpen = !isOpen" class="btn btn-primary">{{$buttonName}}</button>
+	<div class="text-right">
+		<button type="button" x-on:click="isOpen = !isOpen" class="btn btn-primary">{{$buttonName}}</button>
+	</div>
 	@endif
 	@if($type =='link')
 	<a href="#" x-on:click.prevent="isOpen = !isOpen">{{$buttonName}}</a>
@@ -13,6 +15,10 @@
 		<div class="container p-4 mx-auto position-absolute left-0 right-0 overflow-hidden mt-24">
 			<div class="card card-body">
 				{{$slot}}
+			</div>
+			<div class="card-footer">
+				<button type="button" x-on:click="isOpen = !isOpen" class="btn btn-warning">close</button>
+
 			</div>
 		</div>
 	</div>

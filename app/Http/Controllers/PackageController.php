@@ -66,7 +66,19 @@ class PackageController extends Controller
      */
     public function update(Request $request, Package $package)
     {
-        //
+        $this->validate(
+            $request,
+            ['banner' => ['sometimes', 'file']]
+        );
+        if ($request->hasFile('banner')) {
+            $banner = $request->file('banner')->store('banner', 'public');
+            $package->banner = $banner;
+            $package->save();
+            return redirect()->back();
+        }
+        $package->fill($request->all());
+        $package->save();
+        return redirect()->back();
     }
 
     /**

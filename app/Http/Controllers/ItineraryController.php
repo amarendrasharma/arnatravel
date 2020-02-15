@@ -21,23 +21,14 @@ class ItineraryController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create(Package $package)
     {;
         $package = collect($package->only('id', 'uuid', 'title'))->first();
         return view('admin.itinarary.create', compact('package'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request, $id)
     {
         $itineraries = collect($request->all());
@@ -47,48 +38,26 @@ class ItineraryController extends Controller
         DB::table('itineraries')->insert($itineraries->toArray());
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Itinerary  $itinerary
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Itinerary $itinerary)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Itinerary  $itinerary
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Itinerary $itinerary)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Itinerary  $itinerary
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Itinerary $itinerary)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Itinerary  $itinerary
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Itinerary $itinerary)
     {
-        //
+        $itinerary->delete();
+        return redirect()->back()->with('success', 'Deleted');
     }
 }
